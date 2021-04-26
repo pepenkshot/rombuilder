@@ -1,0 +1,22 @@
+env: # Environt variable to pass to all tasks
+    CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
+    CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
+    rclone_config: "ENCRYPTED[c43a67a8bba3c2335bb4379f499d2fb045e9a067e3260e739b800b16eca10192a8e5bf07d0232fe5b4a27d942850871b"
+
+
+task:
+    name: RomBuild
+    timeout_in: 122m
+    container:
+      image: mrkhan007/aosp:latest
+      cpu: 8
+      memory: 30G     
+    download_ccache_script:
+      - bash download_ccache 
+    sync_script:
+      - bash sync
+    build_script:
+      - bash build
+    upload_ccache_script:
+      - bash upload_ccache
+

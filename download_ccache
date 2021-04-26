@@ -1,0 +1,10 @@
+#!/bin/bash
+
+url=https://mirror.fourninesixx.workers.dev/GdriveXbot/ccache2.tar.gz
+
+cd /tmp # Where to download cccahe
+time aria2c $url -x16 -s50
+echo "dl done"
+time tar xf ccache2.tar.gz
+echo "unzip done"
+find ccache2.tar.gz -delete
