@@ -21,4 +21,3 @@ git clone --depth=1 https://github.com/pepenkshot/device_xiaomi_lancelot device/
 git clone --depth=1 https://github.com/Redmi-MT6768/android_vendor_xiaomi_lancelot -b ten vendor/xiaomi/lancelot
 git clone https://github.com/sarveshrulz/android_vendor_aeonax_ANXCamera -b v185 vendor/aeonax/ANXCamera
 bash device/xiaomi/lancelot/vendorsetup.sh
-
